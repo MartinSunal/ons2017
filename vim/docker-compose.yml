@@ -1,0 +1,16 @@
+version: '2'
+services:
+  router:
+    build: ./router
+    image: router-vnf
+    container_name: router
+    stdin_open: true
+    tty: true
+    privileged: true
+  fw:
+    build: ./fw
+    image: iptables-vnf
+    container_name: fw
+    stdin_open: true
+    tty: true
+    privileged: true
